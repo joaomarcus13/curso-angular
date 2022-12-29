@@ -1,0 +1,43 @@
+<app-title title="ola" *ngIf="destroy"></app-title>
+<button (click)="destruir()">destruir component</button>
+<br>
+<br>
+<br>
+<br>
+{{ valor }}
+<button (click)="add()">add</button>
+<!-- <app-data-biding></app-data-biding> -->
+
+<br>
+<br>
+<!-- <app-diretivas></app-diretivas> -->
+
+
+<app-diretivas-atributos>
+    <h1>diretivas atributos</h1>
+    <h3>aula</h3>
+</app-diretivas-atributos>
+
+
+<!-- modules -->
+<!-- <app-new-component></app-new-component> -->
+<app-input [contador]="addValue"></app-input>
+<app-output (enviarDados)="setDados($event)" ></app-output>
+<ng-template [ngIf]="getDados">
+    <h2> {{getDados.nome}}</h2>
+    <h2> {{getDados.idade}}</h2>
+</ng-template>
+
+
+<br>
+<hr>
+<app-food-list></app-food-list>
+
+<app-food-add></app-food-add>
+
+
+<br>
+<hr>
+<app-forms></app-forms>
+
+<router-outlet></router-outlet>

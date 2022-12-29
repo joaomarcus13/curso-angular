@@ -1,0 +1,20 @@
+<hr>
+<h1>interpolation</h1>
+<p>{{ nome }}</p>
+<br>
+<hr>
+<h1>property biding</h1>
+<button [disabled]="checkedDisabled">button</button>
+<br>
+<hr>
+<h1>evend biding</h1>
+<button (click)="alertaInfo($event)">evento</button>
+<br>
+<div (mousemove)="mouseMove($event)" [style]="'background: red; width: 300px; height: 300px'"></div>
+
+{{ position.x }} {{ position.y }}
+
+<br>
+<hr>
+<input [(ngModel)]="nome" />
+{{ nome }}

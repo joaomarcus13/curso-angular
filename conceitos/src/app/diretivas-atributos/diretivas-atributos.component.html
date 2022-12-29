@@ -1,0 +1,27 @@
+<ng-content select='h1'></ng-content>
+<hr>
+<!-- <p [ngClass]="{'active': valor, 'disable': !valor}">ngClass</p> -->
+<!-- <p [ngStyle]="{'font-size': height}">ngClass</p> -->
+
+<hr>
+
+<input [(ngModel)]="nome" />
+<button (click)='add()'>add</button>
+<li *ngFor="let i of list">
+    {{i | uppercase}}
+</li>
+
+<hr>
+<br>
+<br>
+<br>
+<h1>ng template</h1>
+
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>{{item}}</p>
+</ng-template>
+
+
+<hr>
+<br>
+<ng-content select="h3"></ng-content>

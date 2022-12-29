@@ -1,0 +1,47 @@
+<div *ngIf="condition; else block">hello</div>
+<ng-template #block>
+    <div>by</div>
+</ng-template>
+
+<hr>
+
+<p *ngIf="conditionClick">
+    true
+</p>
+<p *ngIf="!conditionClick">
+    false
+</p>
+
+<button (click)="onClick()">
+    clicar
+</button>
+
+<hr>
+
+<ul>
+    <li *ngFor="let item of list; let i = index">
+        {{ i+1 }} - {{item.nome}}
+    </li>
+</ul>
+<button (click)="onClickAddList()">
+    add
+</button>
+
+<br>
+<hr>
+
+<input type="text" [(ngModel)]="switch">
+<div [ngSwitch]="switch">
+    <p *ngSwitchCase="'joao'">
+        joao
+    </p>
+    <p *ngSwitchCase="'marcos'">
+        marcos
+    </p>
+    <p *ngSwitchDefault>
+        unknown
+    </p>
+</div>
+
+<br>
+<hr>
