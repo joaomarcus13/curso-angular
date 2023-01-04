@@ -5,6 +5,7 @@ import { CanActiveGuard } from './shared/guards/can-active.guard';
 import { CanDeactiveGuard } from './shared/guards/can-deactive.guard';
 import { HomeComponent } from './shared/pages/home/home.component';
 import { CanLoadGuard } from './shared/guards/can-load.guard';
+import { CanActivateChildGuard } from './shared/guards/can-activate-child.guard';
 
 const routes: Routes = [
   {
@@ -21,7 +22,8 @@ const routes: Routes = [
     path: 'core',
     loadChildren: () => import('./core/core.module')
       .then((m)=>m.CoreModule),
-    canLoad: [CanLoadGuard]
+    canLoad: [CanLoadGuard],
+    canActivateChild: [CanActivateChildGuard]
   },
 ];
 

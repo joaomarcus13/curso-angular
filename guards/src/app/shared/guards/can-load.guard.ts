@@ -9,6 +9,15 @@ export class CanLoadGuard implements CanLoad {
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    console.log('canLoad')
+    console.log(route)
+    console.log(segments)
+
+    if(segments[1]?.path === 'leads'){
+      return true
+    }
+
+    alert("modulo nao carregado")
+    return false;
   }
 }

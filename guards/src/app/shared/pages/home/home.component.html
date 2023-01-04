@@ -9,11 +9,13 @@
 </a>
 <br>
 <br>
-<a routerLink="core">
+<a routerLink="core" 
+   [queryParams]="{account:'admin', password:'123'}">
    Dashboard
 </a>
 <br>
-<a routerLink="core/leads">
+<a routerLink="core/leads"
+   [queryParams]="{account:'admin', password:'123'}">
    Leads
 </a>
 <p>home works!</p>
