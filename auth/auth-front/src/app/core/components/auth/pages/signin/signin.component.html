@@ -1,14 +1,20 @@
 <div class="container">
   <img src="./assets/logo.png" alt="Logo da Empresa" />
-  <form>
+  <form [formGroup]="formAuth" (ngSubmit)="submitForm()">
     <label>
-        <input type="email" placeholder="Email" required>
+        <input type="email" 
+               placeholder="Email" 
+               formControlName="email"
+               required>
     </label>
     <label>
-        <input type="password" placeholder="Senha" required>
+        <input type="password" 
+               formControlName="password" 
+               placeholder="Senha" 
+               required>
     </label>
-    <button class="btn-vermelho" >Login</button>
+    <button class="btn-vermelho" [disabled]="formAuth.invalid" >Login</button>
   </form>
 
-  <span>Usuario ou senha incorretos</span>
+  <span *ngIf="" class="msg-error">Usuario ou senha incorretos</span>
 </div>
