@@ -27,8 +27,10 @@ export class SigninComponent implements OnInit {
   submitForm(){
     if(this.formAuth.valid){
       this.authService.signin(this.formAuth.value).subscribe({
-        next: (res)=>res,
-        error: e=>e
+        next: (res)=>{
+          this.msgError = ''
+        },
+        error: e=> this.msgError = e
       })
     }
   }
